@@ -58,9 +58,14 @@ header {
 
     .project {
         box-shadow: 0 0 1em #0003;
-        transition:scale .25s ease-out, box-shadow .25s ease-out;
+        transition:scale .25s ease-out,
+            box-shadow .25s ease-out,
+            border-radius .25s ease-out;
+        border-radius:1em;
+        overflow:hidden;
 
         &:hover {
+            border-radius:.25em;
             scale:1.05;
             cursor:pointer;
             box-shadow:0 0 1em #0009;
