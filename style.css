@@ -7,6 +7,10 @@ h1,h2,h3,h4,h5,h6 {
     margin:0;
 }
 
+p {
+    margin:1em 0 0;
+}
+
 img {
     max-width:100%;
     display:block;
@@ -50,8 +54,8 @@ header {
 }
 
 .projects-grid {
-    --horizontal-gap:2em;
-    gap:4em var(--horizontal-gap);
+    --horizontal-gap:2vw;
+    gap:var(--horizontal-gap);
     display:flex;
     flex-flow:column wrap;
 
@@ -59,19 +63,19 @@ header {
     /* Defaulting to 1 column for mobile and moving up */
     .project { width:100%; }
     @media (width >= 600px) { 
-        max-height:600vw;
+        max-height:1020vw;
         .project { width: calc(50% - var(--horizontal-gap)) }
     }
     @media (width >= 900px) { 
-        max-height:320vw;
+        max-height:450vw;
         .project { width: calc(33.333% - var(--horizontal-gap)) }
     }
     @media (width >= 1420px) { 
-        max-height:200vw;
+        max-height:290vw;
         .project { width: calc(25% - var(--horizontal-gap)) }
     }
     @media (width >= 1920px) { 
-        max-height:130vw;
+        max-height:180vw;
         .project { width: calc(20% - var(--horizontal-gap)) }
     }
 
@@ -82,11 +86,13 @@ header {
             transition:scale .5s,
                 box-shadow .5s,
                 filter .5s;
-            border:5px solid #fff;
+            border:.3vw solid #fff;
             padding:0;
             display:block;
             box-shadow: 0 0 1em #0003;
             width:100%;
+            margin:0;
+            display:border-box;
         }
 
         .project-button:hover {
@@ -97,6 +103,7 @@ header {
 
         img {
             width:100%;
+            border-radius:.75em;
         }
         
         .project-dates {
@@ -133,7 +140,7 @@ header {
         @media (width >= 600px) {
             margin:3em;
             padding:1em 3em 3em;
-            font-size:1.25rem;
+            font-size:1.2rem;
             justify-self:center;
         }
 
