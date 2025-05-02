@@ -21,12 +21,21 @@ header {
 #projects {
     padding:6em 3em;
     background:#eee;
+    transition:background .5s;
 
     h2 {
         text-transform:uppercase;
         text-align:center;
         font-size:2.5rem;
         margin-bottom:1em;
+    }
+
+    &:has(.project:hover) {
+        background:#0008;
+
+        .project:not(:hover) {
+            filter:brightness(.35);
+        }
     }
 }
 
@@ -58,9 +67,10 @@ header {
 
     .project {
         box-shadow: 0 0 1em #0003;
-        transition:scale .25s ease-out,
-            box-shadow .25s ease-out,
-            border-radius .25s ease-out;
+        transition:scale .5s,
+            box-shadow .5s,
+            border-radius .5s,
+            filter .5s;
         border-radius:1em;
         overflow:hidden;
 
