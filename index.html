@@ -4,12 +4,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Alexander Thacker</title>
+    <title>Carl Alexander Thacker</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Sen:wght@400..800&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="scripts.js" defer></script>
 </head>
 <body>
     <header>
@@ -19,9 +20,41 @@
         <section id="projects">
             <h2>Projects</h2>
             <div class="projects-grid">
+
                 <article class="project">
-                    <img src="projects/clink-different.webp" alt="Clink Different" />
+                    <button class="project-button">
+                        <img src="projects/clink-different.webp" alt="Clink Different" />
+                    </button>
+                    <dialog class="popup">
+                        <div class="dialog-content">
+                            <button class="project-close-button">× <span class="visually-hidden">Close</span></button>
+                            <h3>Clink Different</h3>
+                            <p class="project-dates">2023 - Present</p>
+                            <p>Collaborated with RFBinder to create a website that promotes Wines of Germany and Bordeaux Wines throughout the United States.</p>
+                            <p>You might think these two regions are different, but look more closely, and you’ll discover fascinating parallels.
+                                They share history, amazing landscapes, culture, culinary passions and a modern outlook on the wine traditions of old. There is more to these renowned regions than meets the eye: Stunning red wines from Germany. Delicious white wines from Bordeaux. Explore surprising styles, discover unparalleled wine-sipping destinations, and dive into our culinary culture. Challenge your perceptions (and your palates).</p>
+
+                            <h4>Responsibilities</h4>
+                            <ul class="two-columns">
+                                <li>Programming Custom Modules</li>
+                                <li>Implementing Custom Theme</li>
+                                <li>Server Management</li>
+                                <li>Design Contributions</li>
+                                <li>Maintenance and Updates</li>
+                            </ul>
+
+                            <h4>Technology</h4>
+                            <ul class="three-columns">
+                                <li>WordPress</li>
+                                <li>Elementor</li>
+                                <li>PHP</li>
+                                <li>JavaScript</li>
+                                <li>jQuery</li>
+                            </ul>
+                        </div>
+                    </dialog>
                 </article>
+
                 <article class="project">
                     <img src="projects/outshine.webp" alt="OUTShine Film Festival" />
                 </article>
