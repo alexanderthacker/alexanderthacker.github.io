@@ -1,3 +1,51 @@
 body {
-    background:pink;
+    font-family: "Sen", sans-serif;
+    margin:0;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    margin:0;
+}
+
+img {
+    max-width:100%;
+    display:block;
+}
+
+header {
+    background:#111;
+    color:#fff;
+    padding:6em 3em;
+}
+
+#projects {
+    padding:6em 3em;
+    background:#eee;
+
+    h2 {
+        text-transform:uppercase;
+        text-align:center;
+        font-size:2.5rem;
+        margin-bottom:1em;
+    }
+}
+
+.projects-grid {
+    --horizontal-gap:2em;
+    gap:4em var(--horizontal-gap);
+    display:flex;
+    flex-flow:column wrap;
+    max-height:2800px;
+
+    .project {
+        width:calc(25% - var(--horizontal-gap));
+        box-shadow: 0 0 1em #0003;
+        transition:scale .25s ease-out, box-shadow .25s ease-out;
+
+        &:hover {
+            scale:1.05;
+            cursor:pointer;
+            box-shadow:0 0 1em #0009;
+        }
+    }
 }
