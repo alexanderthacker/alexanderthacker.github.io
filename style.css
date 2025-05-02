@@ -35,10 +35,28 @@ header {
     gap:4em var(--horizontal-gap);
     display:flex;
     flex-flow:column wrap;
-    max-height:2800px;
+
+    /* Max Height needs to be updated depending on number/size of projects */
+    /* Defaulting to 1 column for mobile and moving up */
+    .project { width:100%; }
+    @media (width >= 700px) { 
+        max-height:600vw;
+        .project { width: calc(50% - var(--horizontal-gap)) }
+    }
+    @media (width >= 900px) { 
+        max-height:320vw;
+        .project { width: calc(33.333% - var(--horizontal-gap)) }
+    }
+    @media (width >= 1420px) { 
+        max-height:200vw;
+        .project { width: calc(25% - var(--horizontal-gap)) }
+    }
+    @media (width >= 1920px) { 
+        max-height:130vw;
+        .project { width: calc(20% - var(--horizontal-gap)) }
+    }
 
     .project {
-        width:calc(25% - var(--horizontal-gap));
         box-shadow: 0 0 1em #0003;
         transition:scale .25s ease-out, box-shadow .25s ease-out;
 
@@ -46,6 +64,10 @@ header {
             scale:1.05;
             cursor:pointer;
             box-shadow:0 0 1em #0009;
+        }
+
+        img {
+            width:100%;
         }
     }
 }
