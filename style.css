@@ -92,7 +92,7 @@ header {
     }
 
     &:has(.project:hover) {
-        background:#615e56;
+        background:#615e56cc;
 
         .project:not(:hover) {
             filter:brightness(.35);
@@ -103,12 +103,12 @@ header {
 .projects-grid {
     --horizontal-gap:2vw;
     gap:var(--horizontal-gap);
-    display:flex;
-    flex-flow:column wrap;
+    /*display:flex;
+    /*flex-flow:column wrap;
 
     /* Max Height needs to be updated depending on number/size of projects */
     /* Defaulting to 1 column for mobile and moving up */
-    .project { width:100%; }
+    /*.project { width:100%; }
     @media (width >= 600px) { 
         max-height:1020vw;
         .project { width: calc(50% - var(--horizontal-gap)) }
@@ -124,13 +124,18 @@ header {
     @media (width >= 1920px) { 
         max-height:180vw;
         .project { width: calc(20% - var(--horizontal-gap)) }
-    }
+    }*/
+    columns:250px;
+    padding:0 5%;
 
     .project {
+        break-inside:avoid;
+        margin-bottom:var(--horizontal-gap);
 
         .project-button {
+            break-inside:avoid;
             border-radius:1em;
-            transition:scale .5s,
+            transition:scale 1s,
                 box-shadow .5s,
                 filter .5s;
             border:.3vw solid #fff;
@@ -139,13 +144,16 @@ header {
             box-shadow: 0 0 1em #0003;
             width:100%;
             margin:0;
-            display:border-box;
+            display:border-box;            
+            transform-origin:50% 5%;
         }
 
         .project-button:hover {
-            scale:1.05;
+            scale:2;
             cursor:pointer;
             box-shadow:0 0 1em #0009;
+            z-index:1;
+            position:relative;
         }
 
         img {
@@ -171,6 +179,7 @@ header {
     display:grid;
     justify-content:center;
     padding:0;
+    overflow:scroll;
 
     .dialog-content {
         background:#fffbf6;
@@ -178,7 +187,6 @@ header {
         align-content:start;
         width:min(100% - 2em, 700px);
         max-height:100%;
-        overflow:scroll;
         padding:1.5em;
         margin:1em;
 

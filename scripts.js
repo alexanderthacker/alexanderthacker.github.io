@@ -5,6 +5,12 @@ projectButtons.forEach(element => element.onclick = function() {
 
 let projectCloseButtons = document.querySelectorAll('.project-close-button');
 projectCloseButtons.forEach(element => element.onclick = function() {
-    console.log(element.closest('dialog'));
     element.closest('dialog').removeAttribute('open');
+});
+
+let dialogBackground = document.querySelectorAll('.popup');
+dialogBackground.forEach(element => element.onclick = function(e) {
+    if(e.target.tagName == 'DIALOG') {
+        element.removeAttribute('open');
+    }
 });
